@@ -300,7 +300,7 @@ class MW_OAuth {
 		if ( is_object( $token ) && isset( $token->error ) ) {
 			header( "HTTP/1.1 500 Internal Server Error" );
 			$token->callback = $callback ;
-			throw new Exception ( 'Error retrieving token1: ' . htmlspecialchars( json_encode($token) ) ) ;
+			throw new Exception ( 'Error retrieving token1: ' . htmlspecialchars( json_encode($token) ) . '<br>'. print_r($token->error, TRUE)) ;
 		}
 		if ( !is_object( $token ) || !isset( $token->key ) || !isset( $token->secret ) ) {
 			header( "HTTP/1.1 500 Internal Server Error" );
