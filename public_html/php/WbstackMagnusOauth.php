@@ -176,16 +176,16 @@ class WbstackMagnusOauth {
             // localhost development, with a full domain prefixing .localhost
             // eg. wiki.addshore.com.localhost
             $wbRoot = $domain;
-            $toolRoot = 'http://' . $domain . $toolUrlTail;
+            $toolRoot = 'https://' . $domain . $toolUrlTail;
 
             // Directly for config
-            $publicMwOAuthUrl = 'http://' . $domain . '/w/index.php?title=Special:OAuth';
+            $publicMwOAuthUrl = 'https://' . $domain . '/w/index.php?title=Special:OAuth';
             $mwOAuthUrl = 'http://' . self::platformIngressHostAndPort . '/w/index.php?title=Special:OAuth';
             $wbPublicHostAndPort = $wbRoot;
             $wbApi = 'http://' . self::platformIngressHostAndPort . '/w/api.php';
             $wbPageBase = $wbRoot . '/wiki/';
             $toolbase = $toolRoot;
-            $entityBase = 'http://' . $wbRoot . '/entity/';
+            $entityBase = 'https://' . $wbRoot . '/entity/';
         } else {
             $wbRoot = $domain;
             $toolRoot = $domain . $toolUrlTail;
