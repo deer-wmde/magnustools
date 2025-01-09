@@ -179,13 +179,11 @@ class WbstackMagnusOauth {
             $toolRoot = 'https://' . $domain . $toolUrlTail;
 
             // Directly for config
-            // $publicMwOAuthUrl = 'https://' . $domain . '/w/index.php?title=Special:OAuth';
-            $publicMwOAuthUrl = 'https://' . $wbRoot . '/w/index.php?title=Special:OAuth'; // TODO this could use the internal network
+            $publicMwOAuthUrl = 'https://' . $domain . '/w/index.php?title=Special:OAuth';
             // $mwOAuthUrl = 'http://' . self::platformIngressHostAndPort . '/w/index.php?title=Special:OAuth';
             $mwOAuthUrl = 'https://' . $wbRoot . '/w/index.php?title=Special:OAuth';
             $wbPublicHostAndPort = $wbRoot;
-            // $wbApi = 'http://' . self::platformIngressHostAndPort . '/w/api.php';
-            $wbApi = 'https://' . $wbRoot . '/w/api.php'; // TODO this could use the internal network
+            $wbApi = 'http://' . self::platformIngressHostAndPort . '/w/api.php';
             $wbPageBase = $wbRoot . '/wiki/';
             $toolbase = $toolRoot;
             $entityBase = 'https://' . $wbRoot . '/entity/';
